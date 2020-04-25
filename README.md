@@ -46,6 +46,22 @@ df = dask.datasets.timeseries()
 df.groupby("name").x.std().compute()
 ```
 
+Note, that you may find that the image we're using has different Dask versions
+than your current setup locally.  Matching these is something that we're
+working on.  In the meantime you might want to install the following packages:
+
+```
+conda install --yes \
+    -c conda-forge \
+    python-blosc \
+    cytoolz \
+    dask==2.14.0 \
+    lz4 \
+    nomkl \
+    numpy==1.18.1 \
+    pandas==1.0.1
+```
+
 ### Optionally look at the dashboard
 
 ```python
