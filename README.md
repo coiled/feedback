@@ -22,7 +22,7 @@ pip install coiled-cloud
 ### Connect to your account
 
 ```python
-from coiled_cloud import Cloud, Cluster
+from coiled_cloud import Cloud, CoiledCluster
 from getpass import getpass
 
 cloud = Cloud(user="your-username", password=getpass("Password: "))
@@ -31,7 +31,7 @@ cloud = Cloud(user="your-username", password=getpass("Password: "))
 ### Create a Dask cluster on the cloud
 
 ```python
-cluster = Cluster()
+cluster = CoiledCluster()
 ```
 
 ### Connect with Dask and do work
