@@ -1,70 +1,10 @@
-Coiled Cloud Issues
-===================
+Coiled Issues
+=============
 
-Thank you for trying out Coiled Cloud.
+Thank you for trying out Coiled!
 
-We are currently in a very experimental stage,
-and so we appreciate your willingness to experiment with us and report issues.
-
+We are currently in a beta stage, so we appreciate your willingness to experiment with us and report issues
 We can't promise that everything will work, but we can promise to be responsive.
 
-Start
------
-
-To get started, download the Python client library, connect to your account, and create a cluster:
-
-### Download Python Client Library from PyPI
-
-```
-pip install coiled-cloud
-```
-
-### Connect to your account
-
-```python
-from coiled_cloud import Cloud, Cluster
-from getpass import getpass
-
-cloud = Cloud(user="your-username", password=getpass("Password: "))
-```
-
-### Create a Dask cluster on the cloud
-
-```python
-cluster = Cluster()
-```
-
-### Connect with Dask and do work
-
-```python
-import dask
-from dask.distributed import Client
-
-client = Client(cluster)
-
-df = dask.datasets.timeseries()
-df.groupby("name").x.std().compute()
-```
-
-Note, that you may find that the image we're using has different Dask versions
-than your current setup locally.  Matching these is something that we're
-working on.  In the meantime you might want to install the following packages:
-
-```
-conda install --yes \
-    -c conda-forge \
-    python-blosc \
-    cytoolz \
-    dask==2.14.0 \
-    lz4 \
-    nomkl \
-    numpy==1.18.1 \
-    pandas==1.0.1
-```
-
-### Optionally look at the dashboard
-
-```python
->>> client.dashboard_link
-https://ecs...
-```
+To get started with Coiled see our [Getting Started guide](https://coiled.io/cloud/getting_started.html)
+and [Documentation](https://coiled.io/cloud/).
