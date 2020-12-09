@@ -1,5 +1,5 @@
-Coiled Issues
-=============
+Coiled Feedback
+===============
 
 Thank you for trying out Coiled!
 
